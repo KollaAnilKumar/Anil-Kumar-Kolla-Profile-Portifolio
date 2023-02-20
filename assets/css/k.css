@@ -1,0 +1,116 @@
+/*frame work*/
+.anil {
+    background:rgb(19, 19, 20);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+    font-family: 'Roboto Mono', monospace;
+    padding-bottom:50px ;
+  }
+  
+  .anilk{
+    width: 80%;
+    border: solid green 4px;
+    margin-top: 20px;
+  }
+  p{
+     margin: 40px;
+  }
+  .wave {
+    float: left;
+    margin: 20px;
+    animation: wave  ease-in-out 0.5s infinite alternate;
+    transform-origin: center -36px;
+  }
+  
+  .wave:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  
+  .wave img {
+    border: 5px solid #f8f8f8;
+    display: block;
+    width: 200px;
+    height: 250px;
+  }
+  
+  .wave figcaption {
+    text-align: center;
+  }
+  
+  .wave:after{
+    content: '';
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    border: 1.5px solid #ffffff;
+    top: -10px; 
+    left: 50%;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(35deg);
+  }
+         
+  .wave:before{
+    content: '';
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    display: block;
+    height: 44px;
+    width: 47px;
+    background-image: url( https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    z-index: 16;
+  }
+          
+  @keyframes wave {
+    0% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+  }
+  a.button1{
+      display: inline-block;
+ padding: 10px;
+ 
+     position: relative;
+     top: -5px;
+     margin: 2px;
+     border-radius: 5px;
+     box-sizing: border-box;
+    text-decoration: none;
+     font-family: sans-serif;
+   font-weight: 200;
+
+     color: rgb(43, 39, 39);
+    text-align: center;
+     transition: 0.2s all;
+    border: #FFFFFF solid 3px;
+  }
+    a.button1:hover{
+    color: black;
+    background:rgb(148, 148, 191);
+    }
+    @media all and (max-width:30em){
+    a.button1{
+    display: block;
+    margin: 5rem ;
+    position: relative;
+    top: -75px;
+    }
+    .anil{
+        padding-bottom: 100px;
+    }
+    }
+    
+    @mixin media() {
+      @media (min-width: 768px) {
+          @content;
+      }
+  }
+  
+   
